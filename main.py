@@ -1,4 +1,3 @@
-
 from pprint import pprint
 
 
@@ -26,10 +25,12 @@ class Shop:
 
     def add(self, *products):
         for i in products:
-            if self.name not in self.__file_name:
-                self.__file_name.write(self.name)
+            if i.name not in self.__file_name:
+                file = open(self.__file_name, 'a')
+                file.write(i.name)
+                file(close)
             else:
-                print('Продукт {} уже есть в магазине'.format(self.name))
+                print('Продукт {} уже есть в магазине'.format(i.name))
         
  
 s1 = Shop()
